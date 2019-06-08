@@ -83,13 +83,8 @@ func getPrefix(deep int) string {
 	if deep < 0 {
 		deep = 0
 	}
-	hastTag := ""
-	if deep < 3 {
-		hastTag = strings.Repeat(`#`, deep+2)
-	}
-
 	temp := strings.Repeat(`    `, deep)
-	return temp + "- " + hastTag
+	return temp + "- "
 }
 
 func writ(fileName, input string) {
