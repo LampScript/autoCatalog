@@ -95,6 +95,7 @@ func writ(fileName, input string) {
 	} else {
 		f, err = os.Create(fileName) //创建文件
 	}
+	defer f.Close()
 	check(err)
 	_, err = io.WriteString(f, input+"\n") //写入文件(字符串)
 	check(err)
